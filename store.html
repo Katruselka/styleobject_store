@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STYLE OBJECT — Shop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#faf6ee;
+    --ink:#2a2420;
+    --brown:#5c4a3a;
+    --taupe:#8a7464;
+    --clay:#a9694b;
+    --line: rgba(42,36,32,0.12);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  .wrap{
+    max-width:520px;
+    margin:0 auto;
+    padding:56px 24px 48px;
+  }
+
+  /* ---- header ---- */
+  header{
+    text-align:center;
+    margin-bottom:44px;
+  }
+  .avatar{
+    width:88px; height:88px;
+    border-radius:50%;
+    overflow:hidden;
+    margin:0 auto 20px;
+    border:1px solid var(--line);
+  }
+  .avatar img{
+    width:100%; height:100%;
+    object-fit:cover;
+    object-position:center 15%;
+  }
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:28px;
+    letter-spacing:0.01em;
+  }
+  header p{
+    color:var(--brown);
+    font-size:15px;
+    margin-top:8px;
+    max-width:320px;
+    margin-left:auto; margin-right:auto;
+  }
+  .socials{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    margin-top:20px;
+  }
+  .socials a{
+    width:38px; height:38px;
+    border:1px solid var(--line);
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    text-decoration:none;
+    color:var(--brown);
+    font-size:14px;
+    transition:border-color .2s ease;
+  }
+  .socials a:hover{ border-color:var(--brown); }
+
+  /* ---- offer cards ---- */
+  .offer{
+    display:flex;
+    gap:16px;
+    padding:20px 0;
+    border-top:1px solid var(--line);
+  }
+  .offer:last-of-type{ border-bottom:1px solid var(--line); }
+  .offer img{
+    width:96px; height:120px;
+    object-fit:cover;
+    background:#e9e1d3;
+    flex-shrink:0;
+  }
+  .offer-body{ flex:1; min-width:0; }
+  .kicker{
+    font-size:12px;
+    color:var(--taupe);
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    margin-bottom:4px;
+  }
+  .offer h2{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:19px;
+    margin-bottom:6px;
+    line-height:1.25;
+  }
+  .offer p{
+    font-size:14px;
+    color:var(--brown);
+    margin-bottom:12px;
+  }
+  .price{
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:12px;
+  }
+  .price .was{
+    color:var(--taupe);
+    text-decoration:line-through;
+    font-weight:400;
+    margin-left:6px;
+  }
+  .btn{
+    display:inline-block;
+    background:var(--ink);
+    color:var(--cream);
+    text-decoration:none;
+    font-size:14px;
+    font-weight:500;
+    padding:10px 18px;
+    border-radius:2px;
+  }
+  .btn.outline{
+    background:none;
+    border:1px solid var(--ink);
+    color:var(--ink);
+  }
+
+  /* ---- shop categories ---- */
+  .shop-section{ margin-top:8px; padding-top:36px; }
+  .shop-section h2{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:22px;
+    text-align:center;
+    margin-bottom:6px;
+  }
+  .shop-section > p{
+    text-align:center;
+    font-size:14px;
+    color:var(--brown);
+    margin-bottom:22px;
+  }
+  .shop-list{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .shop-link{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 18px;
+    border:1px solid var(--ink);
+    text-decoration:none;
+    color:var(--ink);
+  }
+  .shop-label{
+    font-family:'Fraunces', serif;
+    font-size:16px;
+  }
+  .shop-arrow{ font-size:15px; }
+  .shop-link:first-child{
+    background:var(--ink);
+    color:var(--cream);
+    border-color:var(--ink);
+  }
+
+  footer{
+    margin-top:48px;
+    text-align:center;
+    font-size:12px;
+    color:var(--taupe);
+    line-height:1.6;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="avatar"><img src="images/shopmy.png" alt="STYLE OBJECT"></div>
+    <h1>STYLE OBJECT</h1>
+    <p>Outfit formulas that look expensive. Real Amazon finds, no guesswork.</p>
+    <div class="socials">
+      <a href="https://instagram.com/styleobject_" target="_blank" rel="noopener">IG</a>
+      <a href="https://amzn.to/4xG3BXv" target="_blank" rel="noopener">A</a>
+    </div>
+  </header>
+
+  <!-- GUIDE -->
+  <div class="offer">
+    <img src="images/guide.png" alt="The Quiet Wardrobe cover">
+    <div class="offer-body">
+      <div class="kicker">Guide</div>
+      <h2>The Quiet Wardrobe</h2>
+      <p>Six capsule looks, real product links, and the styling logic behind them — no more buying pieces that don't work together.</p>
+      <div class="price"><!-- add price --> $0.00</div>
+      <a class="btn" href="#" target="_blank" rel="noopener"><!-- link to Etsy listing -->Get the guide</a>
+    </div>
+  </div>
+
+  <!-- CONSULTATION -->
+  <div class="offer">
+    <img src="images/consultation.png" alt="1:1 style session">
+    <div class="offer-body">
+      <div class="kicker">1:1 Session</div>
+      <h2>Style Refresh Call</h2>
+      <p>A 30-minute call to build a capsule plan around what's already in your closet, plus a shopping list for what's missing.</p>
+      <div class="price"><!-- add price --> $0.00</div>
+      <a class="btn outline" href="mailto:hello@styleobject.shop?subject=Style%20Refresh%20Call"><!-- swap for real booking link -->Book a call</a>
+    </div>
+  </div>
+
+  <!-- SHOPMY -->
+  <div class="offer">
+    <img src="images/shopmy.png" alt="ShopMy shop">
+    <div class="offer-body">
+      <div class="kicker">Shop</div>
+      <h2>Shop My Looks</h2>
+      <p>Every outfit and product from the videos, all in one place.</p>
+      <a class="btn" href="https://shopmy.us/shop/styleobject?Section_id=4409234&amp;tab=collections" target="_blank" rel="noopener">Shop Here</a>
+    </div>
+  </div>
+
+  <!-- SHEIN -->
+  <div class="offer">
+    <img src="images/shein.png" alt="SHEIN finds">
+    <div class="offer-body">
+      <div class="kicker">Budget Finds</div>
+      <h2>My Favorite SHEIN Finds</h2>
+      <p>Cute, affordable pieces that still look expensive.</p>
+      <a class="btn" href="https://onelink.shein.com/51/618lc6pdraq3" target="_blank" rel="noopener">Shop SHEIN Finds</a>
+    </div>
+  </div>
+
+  <!-- AMAZON -->
+  <div class="offer">
+    <img src="images/amazon.png" alt="Amazon storefront">
+    <div class="offer-body">
+      <div class="kicker">Storefront</div>
+      <h2>Shop on Amazon</h2>
+      <p>The full storefront — every look, sorted and shoppable.</p>
+      <a class="btn" href="https://amzn.to/4xG3BXv" target="_blank" rel="noopener">Shop on Amazon</a>
+    </div>
+  </div>
+
+  <footer>
+    As an Amazon Associate, styleobject earns from qualifying purchases.
+  </footer>
+
+</div>
+</body>
+</html>
