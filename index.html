@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#151310">
+<title>STYLE OBJECT — Curated Fashion Edit</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --black:#151310;
+    --black-soft:#211e1a;
+    --ivory:#f3eee6;
+    --ivory-deep:#e8dfd2;
+    --stone:#aa9e8f;
+    --gold:#b99a61;
+    --line:rgba(21,19,16,.12);
+    --line-dark:rgba(243,238,230,.16);
+    --shadow:0 18px 50px rgba(24,18,10,.10);
+    --radius:2px;
+  }
+
+  *{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+  }
+
+  html{
+    scroll-behavior:smooth;
+    background:var(--ivory);
+  }
+
+  body{
+    color:var(--black);
+    background:
+      radial-gradient(circle at 90% -5%, rgba(185,154,97,.12), transparent 24rem),
+      var(--ivory);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.45;
+  }
+
+  a{
+    color:inherit;
+    -webkit-tap-highlight-color:transparent;
+  }
+
+  .page{
+    width:min(100%, 520px);
+    margin:0 auto;
+    min-height:100vh;
+    overflow:hidden;
+    background:var(--ivory);
+  }
+
+  /* ---------- TOP BAR ---------- */
+  .topbar{
+    min-height:38px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:9px 18px;
+    background:var(--black);
+    color:var(--ivory);
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    text-align:center;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding:30px 22px 32px;
+    background:var(--black);
+    color:var(--ivory);
+    border-top:1px solid rgba(255,255,255,.03);
+  }
+
+  .hero::after{
+    content:"";
+    position:absolute;
+    left:22px;
+    right:22px;
+    bottom:0;
+    height:1px;
+    background:var(--line-dark);
+  }
+
+  .brand-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    margin-bottom:34px;
+  }
+
+  .wordmark{
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.24em;
+    text-transform:uppercase;
+    white-space:nowrap;
+  }
+
+  .social-nav{
+    display:flex;
+    gap:8px;
+  }
+
+  .social-link{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-width:36px;
+    height:36px;
+    padding:0 11px;
+    border:1px solid var(--line-dark);
+    color:var(--ivory);
+    text-decoration:none;
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:.10em;
+    text-transform:uppercase;
+    transition:.2s ease;
+  }
+
+  .social-link:hover{
+    border-color:var(--gold);
+    color:var(--gold);
+  }
+
+  .hero-layout{
+    display:grid;
+    grid-template-columns:1fr 112px;
+    align-items:end;
+    gap:20px;
+  }
+
+  .eyebrow{
+    color:var(--gold);
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:.20em;
+    text-transform:uppercase;
+    margin-bottom:12px;
+  }
+
+  h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:44px;
+    line-height:.93;
+    font-weight:500;
+    letter-spacing:-.025em;
+    max-width:300px;
+  }
+
+  h1 em{
+    font-weight:500;
+    color:var(--gold);
+  }
+
+  .hero-copy{
+    margin-top:18px;
+    max-width:290px;
+    color:#c9c0b6;
+    font-size:13px;
+    line-height:1.7;
+  }
+
+  .hero-portrait{
+    position:relative;
+    width:112px;
+    aspect-ratio:3/4;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.18);
+  }
+
+  .hero-portrait img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center 18%;
+    display:block;
+    filter:saturate(.88) contrast(1.02);
+  }
+
+  .hero-portrait::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.04);
+    pointer-events:none;
+  }
+
+  .hero-meta{
+    margin-top:28px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    color:#968b80;
+    font-size:9.5px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+  }
+
+  /* ---------- SHOP SECTION ---------- */
+  .shop-section{
+    padding:34px 18px 26px;
+  }
+
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:20px;
+    margin:0 4px 18px;
+  }
+
+  .section-kicker{
+    font-size:9.5px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:#8a7b69;
+    font-weight:600;
+    margin-bottom:6px;
+  }
+
+  h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:32px;
+    font-weight:600;
+    letter-spacing:-.02em;
+    line-height:1;
+  }
+
+  .section-note{
+    color:#8d8277;
+    font-size:10px;
+    text-align:right;
+    line-height:1.45;
+  }
+
+  .cards{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+  }
+
+  .shop-card{
+    display:block;
+    position:relative;
+    overflow:hidden;
+    background:#fff;
+    border:1px solid rgba(21,19,16,.10);
+    box-shadow:var(--shadow);
+    text-decoration:none;
+    border-radius:var(--radius);
+    transition:transform .22s ease, box-shadow .22s ease;
+  }
+
+  .shop-card:active{
+    transform:scale(.995);
+  }
+
+  .shop-card-media{
+    position:relative;
+    background:#d8d0c5;
+    overflow:hidden;
+  }
+
+  .shop-card img{
+    display:block;
+    width:100%;
+    height:auto;
+    min-height:220px;
+    object-fit:cover;
+    transition:transform .45s cubic-bezier(.2,.8,.2,1);
+  }
+
+  .shop-card:hover img{
+    transform:scale(1.018);
+  }
+
+  .shop-card-badge{
+    position:absolute;
+    top:14px;
+    left:14px;
+    z-index:2;
+    padding:7px 9px;
+    background:rgba(21,19,16,.88);
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+    color:var(--ivory);
+    font-size:9px;
+    font-weight:600;
+    line-height:1;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+  }
+
+  .shop-card-copy{
+    min-height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    padding:15px 16px 16px;
+    background:#faf7f1;
+  }
+
+  .card-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:23px;
+    font-weight:600;
+    line-height:1;
+  }
+
+  .card-subtitle{
+    margin-top:5px;
+    color:#85796b;
+    font-size:10px;
+    letter-spacing:.04em;
+  }
+
+  .card-arrow{
+    flex:0 0 36px;
+    width:36px;
+    height:36px;
+    border:1px solid var(--line);
+    display:grid;
+    place-items:center;
+    font-size:18px;
+    font-family:Arial,sans-serif;
+  }
+
+  /* ---------- FEATURED SERVICE ---------- */
+  .service{
+    margin:4px 18px 34px;
+    background:var(--black);
+    color:var(--ivory);
+    border:1px solid rgba(21,19,16,.12);
+    box-shadow:0 18px 50px rgba(24,18,10,.14);
+  }
+
+  .service-image{
+    position:relative;
+    overflow:hidden;
+  }
+
+  .service-image img{
+    width:100%;
+    height:auto;
+    display:block;
+  }
+
+  .service-badge{
+    position:absolute;
+    top:14px;
+    left:14px;
+    background:var(--gold);
+    color:var(--black);
+    padding:7px 9px;
+    font-size:9px;
+    line-height:1;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+  }
+
+  .service-body{
+    padding:22px 20px 20px;
+  }
+
+  .service-eyebrow{
+    color:var(--gold);
+    font-size:9.5px;
+    font-weight:600;
+    letter-spacing:.19em;
+    text-transform:uppercase;
+    margin-bottom:10px;
+  }
+
+  .service h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:32px;
+    line-height:1;
+    font-weight:600;
+    letter-spacing:-.02em;
+  }
+
+  .service p{
+    margin-top:12px;
+    max-width:390px;
+    color:#bdb4a9;
+    font-size:12.5px;
+    line-height:1.65;
+  }
+
+  .service-action{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    margin-top:20px;
+    padding-top:18px;
+    border-top:1px solid var(--line-dark);
+  }
+
+  .price{
+    display:flex;
+    align-items:baseline;
+    gap:9px;
+  }
+
+  .price-now{
+    font-family:'Cormorant Garamond',serif;
+    font-size:31px;
+    font-weight:600;
+    color:var(--ivory);
+  }
+
+  .price-was{
+    color:#746c64;
+    font-size:12px;
+    text-decoration:line-through;
+  }
+
+  .service-button{
+    min-width:138px;
+    text-align:center;
+    padding:13px 14px;
+    background:var(--ivory);
+    color:var(--black);
+    text-decoration:none;
+    font-size:9.5px;
+    font-weight:700;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    transition:.2s ease;
+  }
+
+  .service-button:hover{
+    background:var(--gold);
+  }
+
+  /* ---------- TRUST / FOOTER ---------- */
+  .trust{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    margin:0 18px 34px;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+
+  .trust-item{
+    padding:16px 8px;
+    text-align:center;
+    border-right:1px solid var(--line);
+  }
+
+  .trust-item:last-child{
+    border-right:0;
+  }
+
+  .trust-item strong{
+    display:block;
+    font-family:'Cormorant Garamond',serif;
+    font-size:18px;
+    font-weight:600;
+    line-height:1;
+  }
+
+  .trust-item span{
+    display:block;
+    margin-top:6px;
+    color:#948778;
+    font-size:8px;
+    letter-spacing:.11em;
+    line-height:1.4;
+    text-transform:uppercase;
+  }
+
+  footer{
+    padding:0 24px 34px;
+    text-align:center;
+    color:#8c8175;
+    font-size:9.5px;
+    line-height:1.7;
+  }
+
+  footer strong{
+    color:var(--black);
+    font-weight:600;
+  }
+
+  .footer-mark{
+    margin:0 auto 15px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:20px;
+    color:var(--black);
+  }
+
+  @media (min-width:700px){
+    body{
+      padding:26px 0;
+    }
+
+    .page{
+      border:1px solid rgba(21,19,16,.08);
+      box-shadow:0 30px 90px rgba(31,22,12,.13);
+    }
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    html{ scroll-behavior:auto; }
+    *,
+    *::before,
+    *::after{
+      transition:none !important;
+    }
+  }
+</style>
+</head>
+
+<body>
+<main class="page">
+
+  <div class="topbar">
+    Curated Fall Edit · Real Finds · Styled by STYLE OBJECT
+  </div>
+
+  <header class="hero">
+    <div class="brand-row">
+      <div class="wordmark">STYLE OBJECT</div>
+
+      <nav class="social-nav" aria-label="Social links">
+        <a class="social-link"
+           href="https://instagram.com/styleobject_"
+           target="_blank"
+           rel="noopener noreferrer">IG</a>
+
+        <a class="social-link"
+           href="https://amzn.to/4A7CxlK"
+           target="_blank"
+           rel="noopener noreferrer">Amazon</a>
+      </nav>
+    </div>
+
+    <div class="hero-layout">
+      <div>
+        <div class="eyebrow">The Curated Wardrobe</div>
+        <h1>Wear less.<br><em>Style it better.</em></h1>
+        <p class="hero-copy">
+          Elevated outfit formulas, fashion finds and wearable edits
+          curated to make getting dressed easier — and better.
+        </p>
+      </div>
+
+      <div class="hero-portrait">
+        <img src="images/shopmy.jpg" alt="STYLE OBJECT fashion edit">
+      </div>
+    </div>
+
+    <div class="hero-meta">
+      <span>Fall 2026</span>
+      <span>Amazon · ShopMy · SHEIN</span>
+    </div>
+  </header>
+
+  <section class="shop-section">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker">Curated destinations</div>
+        <h2>Shop the edit</h2>
+      </div>
+
+      <div class="section-note">
+        Click any edit<br>to shop
+      </div>
+    </div>
+
+    <div class="cards">
+
+      <!-- STYLE OBJECT SHOP -->
+      <a class="shop-card"
+         href="https://0v1ubi-cm.myshopify.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+
+        <div class="shop-card-media">
+          <div class="shop-card-badge">STYLE OBJECT SHOP</div>
+          <img src="images/shop.png" alt="Shop the STYLE OBJECT collection">
+        </div>
+
+        <div class="shop-card-copy">
+          <div>
+            <div class="card-title">The Style Edit</div>
+            <div class="card-subtitle">Curated pieces for polished everyday dressing</div>
+          </div>
+          <div class="card-arrow">↗</div>
+        </div>
+      </a>
+
+      <!-- AMAZON -->
+      <a class="shop-card"
+         href="https://amzn.to/4A7CxlK"
+         target="_blank"
+         rel="noopener noreferrer">
+
+        <div class="shop-card-media">
+          <div class="shop-card-badge">AMAZON</div>
+          <img src="images/amazon.jpg" alt="Shop STYLE OBJECT Amazon finds">
+        </div>
+
+        <div class="shop-card-copy">
+          <div>
+            <div class="card-title">Amazon Fashion Edit</div>
+            <div class="card-subtitle">The finds I would actually buy and style</div>
+          </div>
+          <div class="card-arrow">↗</div>
+        </div>
+      </a>
+
+      <!-- SHOPMY -->
+      <a class="shop-card"
+         href="https://shopmy.us/shop/styleobject?Section_id=4409234&tab=collections"
+         target="_blank"
+         rel="noopener noreferrer">
+
+        <div class="shop-card-media">
+          <div class="shop-card-badge">SHOPMY</div>
+          <img src="images/shopmy.jpg" alt="Shop STYLE OBJECT looks on ShopMy">
+        </div>
+
+        <div class="shop-card-copy">
+          <div>
+            <div class="card-title">Shop My Looks</div>
+            <div class="card-subtitle">Full outfits, color edits and designer finds</div>
+          </div>
+          <div class="card-arrow">↗</div>
+        </div>
+      </a>
+
+      <!-- SHEIN -->
+      <a class="shop-card"
+         href="https://onelink.shein.com/52/61wjj9mk0q33"
+         target="_blank"
+         rel="noopener noreferrer">
+
+        <div class="shop-card-media">
+          <div class="shop-card-badge">SHEIN</div>
+          <img src="images/shein.jpg" alt="Shop STYLE OBJECT SHEIN picks">
+        </div>
+
+        <div class="shop-card-copy">
+          <div>
+            <div class="card-title">The Affordable Edit</div>
+            <div class="card-subtitle">Trend-right pieces styled to look more elevated</div>
+          </div>
+          <div class="card-arrow">↗</div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- PERSONAL STYLING -->
+  <section class="service">
+    <div class="service-image">
+      <div class="service-badge">Limited Intro Offer</div>
+      <img src="images/personal_outfit_plan.jpg" alt="Personal Outfit Plan by STYLE OBJECT">
+    </div>
+
+    <div class="service-body">
+      <div class="service-eyebrow">Personal Styling</div>
+
+      <h3>Your wardrobe.<br>Your real life.</h3>
+
+      <p>
+        A personalized outfit plan built around your style, body, lifestyle
+        and the pieces you already own — with clear formulas for what to wear next.
+      </p>
+
+      <div class="service-action">
+        <div class="price">
+          <span class="price-now">$19.99</span>
+          <span class="price-was">$59</span>
+        </div>
+
+        <a class="service-button"
+           href="mailto:styleobjectstore@gmail.com?subject=Personal%20Outfit%20Plan%20Request">
+          Get my plan
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust" aria-label="STYLE OBJECT benefits">
+    <div class="trust-item">
+      <strong>Real</strong>
+      <span>Product finds</span>
+    </div>
+    <div class="trust-item">
+      <strong>Styled</strong>
+      <span>Outfit formulas</span>
+    </div>
+    <div class="trust-item">
+      <strong>Curated</strong>
+      <span>No guesswork</span>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-mark">STYLE OBJECT</div>
+
+    As an Amazon Associate, STYLE OBJECT earns from qualifying purchases.<br>
+    Some links may be affiliate links, which may earn STYLE OBJECT a commission at no extra cost to you.<br><br>
+
+    SHEIN: enter code <strong>3NK52QN</strong> in the app search to see the full edit.
+  </footer>
+
+</main>
+</body>
+</html>
