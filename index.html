@@ -540,6 +540,71 @@
   .free-guide p{font-size:12px;line-height:1.75;max-width:440px;color:#655c52}
   .guide-button{display:inline-block;margin-top:18px;padding:15px 20px;background:#151310;color:#f3eee6;font-size:10px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;font-weight:600}
   .next-edit{padding:8px 18px 36px}.next-edit h2{margin:8px 4px 12px}.next-edit>p{margin:0 4px 18px;color:#71675c;font-size:12px;line-height:1.7}.next-choice{display:block;margin:9px 0;padding:17px;background:#faf7f1;border:1px solid rgba(21,19,16,.12);color:#151310;text-decoration:none}.next-choice strong{font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:600}.next-choice span{display:block;margin-top:5px;color:#776d60;font-size:11px;line-height:1.55}
+
+  /* Original STYLEOBJECT layout, refined for desktop and cool grey palette */
+  :root{
+    --black:#171a1f;
+    --black-soft:#242932;
+    --ivory:#f0f2f4;
+    --ivory-deep:#e1e5e9;
+    --stone:#818a96;
+    --gold:#b5bec8;
+    --line:rgba(23,26,31,.14);
+    --line-dark:rgba(240,242,244,.19);
+    --shadow:0 18px 45px rgba(22,29,38,.09);
+  }
+  html{background:#e7eaed}
+  body{background:#e7eaed}
+  .page{width:min(100%,1240px);overflow:hidden;background:var(--ivory)}
+  .hero-copy{color:#c4cad1}
+  .hero-meta{color:#a6afb9}
+  .section-kicker,.service-eyebrow{color:#7b8694}
+  .section-note,.card-subtitle,.next-edit>p{color:#65707c}
+  .shop-card-media{background:#d9dee4}
+  .shop-card-copy,.next-choice{background:#fff}
+  .free-guide{background:#dfe4e9;border-color:#c7cfd8}
+  .free-guide .guide-label{color:#566371}
+  .free-guide p{color:#4e5965}
+  .guide-button{background:var(--black);color:#fff}
+  .next-choice{color:var(--black);border-color:var(--line)}
+  .next-choice span{color:#65707c}
+  footer, .trust-item span{color:#68727d}
+  @media(min-width:800px){
+    body{padding:0}
+    .page{box-shadow:0 22px 65px rgba(18,25,33,.08);border:0}
+    .hero{padding:42px clamp(28px,5vw,66px) 48px}
+    .hero::after{left:clamp(28px,5vw,66px);right:clamp(28px,5vw,66px)}
+    .brand-row{margin-bottom:46px}
+    .wordmark{font-size:15px}
+    .hero-layout{grid-template-columns:minmax(0,1.5fr) minmax(180px,.72fr);gap:36px;align-items:center}
+    h1{font-size:clamp(64px,7vw,100px);max-width:700px}
+    .hero-copy{font-size:15px;max-width:430px;line-height:1.8}
+    .hero-portrait{width:100%;max-width:300px;justify-self:end}
+    .hero-meta{margin-top:38px}
+    .shop-section{padding:58px clamp(28px,5vw,64px) 48px}
+    h2{font-size:48px}
+    .section-head{margin-bottom:28px}
+    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .shop-card-media{aspect-ratio:4/5}
+    .shop-card img{height:100%;min-height:0;object-fit:cover}
+    .shop-card-copy{min-height:106px;align-items:flex-start}
+    .card-title{font-size:27px}
+    .card-subtitle{font-size:11px;line-height:1.5}
+    .service{margin:0 clamp(28px,5vw,64px) 48px;display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+    .service-image img{width:100%;height:100%;object-fit:cover}
+    .service-body{padding:clamp(24px,3.5vw,46px)}
+    .service h3{font-size:43px}
+    .free-guide{margin:0 clamp(28px,5vw,64px) 46px;padding:40px}
+    .next-edit{padding:0 clamp(28px,5vw,64px) 42px}
+    .trust{margin:0 clamp(28px,5vw,64px) 34px}
+    footer{padding:0 34px 34px}
+  }
+  @media(min-width:800px) and (max-width:1000px){
+    .card-title{font-size:23px}
+    .shop-card-copy{padding:14px 12px}
+    .card-arrow{flex-basis:30px;width:30px;height:30px}
+  }
+  @media(max-width:799px){body{padding:0}}
 </style>
 </head>
 
