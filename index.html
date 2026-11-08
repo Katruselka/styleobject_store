@@ -540,6 +540,47 @@
   .free-guide p{font-size:12px;line-height:1.75;max-width:440px;color:#655c52}
   .guide-button{display:inline-block;margin-top:18px;padding:15px 20px;background:#151310;color:#f3eee6;font-size:10px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;font-weight:600}
   .next-edit{padding:8px 18px 36px}.next-edit h2{margin:8px 4px 12px}.next-edit>p{margin:0 4px 18px;color:#71675c;font-size:12px;line-height:1.7}.next-choice{display:block;margin:9px 0;padding:17px;background:#faf7f1;border:1px solid rgba(21,19,16,.12);color:#151310;text-decoration:none}.next-choice strong{font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:600}.next-choice span{display:block;margin-top:5px;color:#776d60;font-size:11px;line-height:1.55}
+
+  /* Boutique editorial refresh */
+  .page{width:min(100%,1160px);overflow:visible}
+  .hero{padding:36px clamp(22px,5vw,64px) 54px}
+  .brand-row{margin-bottom:52px}
+  .wordmark{font-size:15px}
+  .hero-layout{grid-template-columns:minmax(0,1.5fr) minmax(170px,.75fr);gap:clamp(20px,5vw,80px);align-items:center}
+  h1{font-size:clamp(55px,8vw,100px);max-width:700px}
+  .hero-copy{font-size:15px;max-width:445px}
+  .hero-portrait{width:100%;max-width:310px;justify-self:end}
+  .shop-section{padding:62px clamp(20px,5vw,64px) 50px}
+  h2{font-size:clamp(38px,5vw,54px)}
+  .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+  .shop-card{box-shadow:0 8px 26px rgba(24,18,10,.08)}
+  .shop-card-media{aspect-ratio:4/5}
+  .shop-card img{height:100%;min-height:0;object-fit:cover}
+  .card-title{font-size:26px}
+  .card-subtitle{font-size:11px;line-height:1.5}
+  .service{margin:0 clamp(20px,5vw,64px) 52px;display:grid;grid-template-columns:1fr 1fr;align-items:center}
+  .service-image img{height:100%;min-height:340px;object-fit:cover}
+  .service-body{padding:clamp(22px,4vw,50px)}
+  .service h3{font-size:clamp(36px,4vw,56px)}
+  .free-guide{margin:0 clamp(20px,5vw,64px) 52px;padding:clamp(30px,5vw,60px)}
+  .next-edit{padding:0 clamp(20px,5vw,64px) 50px}
+  .trust{margin:0 clamp(20px,5vw,64px) 36px}
+  body{padding:0}
+  @media(min-width:700px){body{padding:0}.page{box-shadow:0 28px 80px rgba(31,22,12,.1)}}
+  @media(max-width:760px){
+    .hero{padding:26px 22px 34px}.brand-row{margin-bottom:34px}
+    .hero-layout{grid-template-columns:1fr 105px;gap:12px}
+    h1{font-size:clamp(42px,9vw,68px)}.hero-copy{font-size:12px}
+    .hero-portrait{width:105px}
+    .shop-section{padding:38px 18px 28px}
+    .cards{grid-template-columns:1fr;gap:18px}
+    .shop-card-media{aspect-ratio:16/10}
+    .service{display:block;margin:4px 18px 34px}
+    .service-image img{min-height:0}
+    .free-guide{margin:26px 18px 34px;padding:30px 24px}
+    .next-edit{padding:8px 18px 36px}
+    .trust{margin:0 18px 34px}
+  }
 </style>
 </head>
 
@@ -547,7 +588,7 @@
 <main class="page">
 
   <div class="topbar">
-    Curated Fall Edit · Real Finds · Styled by STYLE OBJECT
+    THE STYLE EDIT · CURATED LOOKS · REAL FINDS
   </div>
 
   <header class="hero">
@@ -584,8 +625,7 @@
         <div class="eyebrow">The Curated Wardrobe</div>
         <h1>Wear less.<br><em>Style it better.</em></h1>
         <p class="hero-copy">
-          Elevated outfit formulas, fashion finds and wearable edits
-          curated to make getting dressed easier — and better.
+          Elevated outfits, unexpected color pairings and fashion finds that look more expensive than they are. Discover the look. Shop the edit.
         </p>
       </div>
 
@@ -595,8 +635,8 @@
     </div>
 
     <div class="hero-meta">
-      <span>Fall 2026</span>
-      <span>Amazon · ShopMy · SHEIN</span>
+      <span>WINTER 2026</span>
+      <span>ShopMy · Amazon</span>
     </div>
   </header>
 
@@ -604,35 +644,21 @@
   <section class="shop-section">
     <div class="section-head">
       <div>
-        <div class="section-kicker">Curated destinations</div>
-        <h2>Shop the edit</h2>
+        <div class="section-kicker">The curated wardrobe</div>
+        <h2>Shop the edits</h2>
       </div>
 
       <div class="section-note">
-        Click any edit<br>to shop
+        Discover the looks<br>Shop the pieces
       </div>
     </div>
 
     <div class="cards">
 
-      <!-- STYLE OBJECT SHOP -->
-      <a class="shop-card"
-         href="https://0v1ubi-cm.myshopify.com/"
-         target="_blank"
-         rel="noopener noreferrer">
-
-        <div class="shop-card-media">
-          <div class="shop-card-badge">STYLE OBJECT SHOP</div>
-          <img src="images/shop.png" alt="Shop the STYLE OBJECT collection">
-        </div>
-
-        <div class="shop-card-copy">
-          <div>
-            <div class="card-title">The Style Edit</div>
-            <div class="card-subtitle">Curated pieces for polished everyday dressing</div>
-          </div>
-          <div class="card-arrow">↗</div>
-        </div>
+      <!-- FEATURED SHOPMY COLLECTION -->
+      <a class="shop-card" href="https://go.shopmy.us/c-8868487?s=sl1_ccr_cpl" target="_blank" rel="noopener noreferrer sponsored">
+        <div class="shop-card-media"><div class="shop-card-badge">THE LATEST EDIT · SHOPMY</div><img src="images/shopmy.jpg" alt="Latest STYLEOBJECT curated looks" loading="lazy"></div>
+        <div class="shop-card-copy"><div><div class="card-title">The New Style Edit</div><div class="card-subtitle">Discover the latest looks and shop the pieces</div></div><div class="card-arrow" aria-hidden="true">↗</div></div>
       </a>
 
       <!-- AMAZON -->
@@ -649,7 +675,7 @@
         <div class="shop-card-copy">
           <div>
             <div class="card-title">Amazon Fashion Edit</div>
-            <div class="card-subtitle">The finds I would actually buy and style</div>
+            <div class="card-subtitle">Wearable fashion finds and outfit capsules</div>
           </div>
           <div class="card-arrow">↗</div>
         </div>
@@ -669,27 +695,7 @@
         <div class="shop-card-copy">
           <div>
             <div class="card-title">Shop My Looks</div>
-            <div class="card-subtitle">Full outfits, color edits and designer finds</div>
-          </div>
-          <div class="card-arrow">↗</div>
-        </div>
-      </a>
-
-      <!-- SHEIN -->
-      <a class="shop-card"
-         href="https://onelink.shein.com/52/61wjj9mk0q33"
-         target="_blank"
-         rel="noopener noreferrer">
-
-        <div class="shop-card-media">
-          <div class="shop-card-badge">SHEIN</div>
-          <img src="images/shein.jpg" alt="Shop STYLE OBJECT SHEIN picks">
-        </div>
-
-        <div class="shop-card-copy">
-          <div>
-            <div class="card-title">The Affordable Edit</div>
-            <div class="card-subtitle">Trend-right pieces styled to look more elevated</div>
+            <div class="card-subtitle">Full outfits, color stories and shoppable edits</div>
           </div>
           <div class="card-arrow">↗</div>
         </div>
@@ -768,7 +774,7 @@
     As an Amazon Associate, STYLE OBJECT earns from qualifying purchases.<br>
     Some links may be affiliate links, which may earn STYLE OBJECT a commission at no extra cost to you.<br><br>
 
-    SHEIN: enter code <strong>3NK52QN</strong> in the app search to see the full edit.
+    STYLEOBJECT · A curated fashion destination.
   </footer>
 
 </main>
